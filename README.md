@@ -22,16 +22,6 @@ Blocker is a robust Android application engineered to help you reclaim your time
 *   **🎨 Material You 3 Design:** A stunning, modern, and expressive user interface that adapts to your device's Monet color palette for a seamless, native experience.
 *   **⚡ Lightweight & Efficient:** Optimized for performance with minimal battery drain, ensuring your device runs smoothly while staying protected.
 
-## 📸 Screenshots
-
-*(Add screenshots of your App's beautiful UI here)*
-
-<div align="center">
-  <img src="screenshots/home.png" width="250" alt="Home Screen"/>
-  <img src="screenshots/settings.png" width="250" alt="Settings Screen"/>
-  <img src="screenshots/block_screen.png" width="250" alt="Blocked Screen"/>
-</div>
-
 ## 🚀 Installation
 
 1. Go to the [Releases page](https://github.com/creativeidiot123/Blocker/releases) of this repository.
