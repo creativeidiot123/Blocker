@@ -25,7 +25,7 @@ Blocker is a robust Android application engineered to help you reclaim your time
 ## 🚀 Installation
 
 1. Go to the [Releases page](https://github.com/creativeidiot123/Blocker/releases) of this repository.
-2. Download the latest `app-release.apk` file.
+2. Download the latest `.apk` file.
 3. On your Android device, open the downloaded APK.
 4. If prompted, allow your file manager or browser to "Install unknown apps".
 5. Follow the on-screen instructions to complete the installation.
