@@ -1,0 +1,12 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Blocker" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your dark theme here. -->
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+
+        <!-- Material 3 Expressive Shapes -->
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.Material3.Corner.Full</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.Material3.Corner.Full</item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.Material3.Corner.ExtraLarge</item>
+    </style>
+</resources>

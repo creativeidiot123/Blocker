@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Required permissions for settings blocking functionality -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" tools:ignore="QueryAllPackagesPermission" />
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS" tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="com.ichi2.anki.permission.READ_WRITE_DATABASE" />
+
+    <application android:name=".BlockerApplication" android:allowBackup="true" android:dataExtractionRules="@xml/data_extraction_rules" android:fullBackupContent="@xml/backup_rules" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:supportsRtl="true" android:theme="@style/Theme.Blocker">
+
+        <activity android:name=".MainActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".ui.AppSelectionActivity" android:exported="false" android:label="Select Apps" android:parentActivityName=".MainActivity" />
+        <activity android:name=".ui.AnkiBlockerActivity" android:exported="false" android:label="Anki Blocker Settings" android:parentActivityName=".MainActivity" />
+
+        <!-- Device Admin Receiver -->
+        <receiver android:name=".receivers.DeviceAdminReceiver" android:enabled="true" android:exported="true" android:label="@string/app_name" android:permission="android.permission.BIND_DEVICE_ADMIN">
+            <meta-data android:name="android.app.device_admin" android:resource="@xml/blocker_admin_config" />
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Boot Receiver for auto-restart after device reboot -->
+        <receiver android:name=".receivers.BootReceiver" android:directBootAware="true" android:enabled="true" android:exported="true" android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+            <intent-filter android:priority="1000">
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+                <data android:scheme="package" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Notification Dismiss Receiver - restarts service if notification is dismissed -->
+        <receiver android:name=".receivers.NotificationDismissReceiver" android:enabled="true" android:exported="false">
+            <intent-filter>
+                <action android:name="com.ankit.blocker.NOTIFICATION_DISMISSED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Accessibility Service -->
+        <service android:name=".services.BlockerAccessibilityService" android:enabled="true" android:exported="false" android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+            <meta-data android:name="android.accessibilityservice" android:resource="@xml/blocker_accessibility_config" />
+        </service>
+
+        <!-- Foreground Service for maintaining protection -->
+        <service android:name=".services.BlockerForegroundService" android:enabled="true" android:exported="false" android:foregroundServiceType="specialUse">
+            <property android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE" android:value="protection_monitoring" />
+        </service>
+
+    </application>
+
+</manifest>

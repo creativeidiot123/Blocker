@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:background="#DD121212" android:clickable="true" android:focusable="true">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_gravity="center" android:gravity="center" android:orientation="vertical" android:padding="32dp">
+
+        <ImageView android:layout_width="86dp" android:layout_height="86dp" android:layout_marginBottom="24dp" android:src="@android:drawable/ic_lock_lock" android:tint="#FFFFFFFF" android:contentDescription="Blocked Icon" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="12dp" android:text="Access Restricted" android:textColor="#FFFFFF" android:textSize="24sp" android:textStyle="bold" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="48dp" android:gravity="center" android:text="This area is protected by Blocker.\nPlease go back to continue using your device." android:textColor="#B3FFFFFF" android:textSize="16sp" />
+
+        <Button android:id="@+id/btn_go_back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:backgroundTint="#FF4CAF50" android:minWidth="160dp" android:minHeight="56dp" android:text="Go Back" android:textColor="#FFFFFF" android:textStyle="bold" />
+
+    </LinearLayout>
+</FrameLayout>

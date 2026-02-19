@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">Blocker</string>
+
+    <!-- Accessibility Service -->
+    <string name="accessibility_description">Blocker monitors system settings to prevent unauthorized changes to critical security configurations. This includes blocking access to device admin settings, accessibility permissions, DNS configurations to maintain system security.\n\n⚠️ Privacy: Blocker operates locally and does not collect or transmit any personal data.</string>
+
+    <!-- Device Admin -->
+    <string name="admin_description">Blocker requires device administrator privileges to protect critical system settings from unauthorized modifications. Administrative access is used solely for security enforcement and tamper protection without compromising user privacy.</string>
+
+    <!-- Toast Messages -->
+    <string name="toast_restricted_access">Restricted access</string>
+
+    <!-- Permission Status -->
+    <string name="admin_permission_enabled">Device Admin: Enabled</string>
+    <string name="admin_permission_disabled">Device Admin: Disabled</string>
+    <string name="accessibility_permission_enabled">Accessibility: Enabled</string>
+    <string name="accessibility_permission_disabled">Accessibility: Disabled</string>
+
+    <!-- Button Labels -->
+    <string name="enable_admin_permission">Enable Device Admin</string>
+    <string name="enable_accessibility_permission">Enable Accessibility</string>
+    <string name="settings_protection_enabled">Settings Protection: Active</string>
+    <string name="settings_protection_disabled">Settings Protection: Inactive</string>
+    <string name="activate_protection">Activate Protection</string>
+    <string name="deactivate_protection">Deactivate Protection</string>
+    <string name="protection_activated">Protection Activated</string>
+    <string name="protection_deactivated">Protection Deactivated</string>
+
+    <!-- Protection Status -->
+    <string name="protection_status">Protection Status</string>
+    <string name="device_admin_section">• Device Administrator Settings</string>
+    <string name="accessibility_section">• Accessibility Service Settings</string>
+
+    <!-- Password Protection -->
+    <string name="password_dialog_title">Enter Password</string>
+    <string name="password_dialog_message">Enter your password to deactivate protection</string>
+    <string name="password_hint">Password</string>
+    <string name="password_setup_title">Set Protection Password</string>
+    <string name="password_setup_message">Create a password to protect against unauthorized deactivation</string>
+    <string name="password_confirm_hint">Confirm Password</string>
+    <string name="password_setup_success">Password set successfully</string>
+    <!-- Password Errors -->
+    <string name="password_incorrect">Incorrect password</string>
+    <string name="password_too_short">Password must be at least 4 characters</string>
+    <string name="password_empty">Password cannot be empty</string>
+    <string name="passwords_dont_match">Passwords do not match</string>
+    <string name="password_locked_out">Too many failed attempts. Try again in %s</string>
+    <string name="password_permanent_lockout">Too many failed attempts. App is permanently locked.</string>
+    <string name="password_attempts_remaining">Attempts remaining: %d</string>
+</resources>

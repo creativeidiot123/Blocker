@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:id="@+id/main" android:layout_width="match_parent" android:layout_height="match_parent" android:background="?attr/colorSurface" tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout android:layout_width="match_parent" android:layout_height="wrap_content" app:elevation="0dp" android:background="@android:color/transparent">
+
+        <com.google.android.material.appbar.MaterialToolbar android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" app:titleCentered="true">
+            <TextView android:id="@+id/appTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center" android:text="@string/app_name" android:textAppearance="?attr/textAppearanceHeadlineMedium" android:textStyle="bold" android:textColor="?attr/colorPrimary" />
+        </com.google.android.material.appbar.MaterialToolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior" android:clipToPadding="false" android:paddingBottom="48dp">
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingHorizontal="24dp" android:paddingTop="16dp" android:clipChildren="false">
+
+            <!-- Protection Card -->
+            <com.google.android.material.card.MaterialCardView style="?attr/materialCardViewFilledStyle" android:layout_width="match_parent" android:layout_height="wrap_content" app:cardBackgroundColor="?attr/colorSurfaceContainerHigh" app:cardCornerRadius="28dp" android:layout_marginBottom="24dp">
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="24dp" android:gravity="center">
+
+                    <TextView android:id="@+id/protectionLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/protection_status" android:textAppearance="?attr/textAppearanceTitleLarge" android:textColor="?attr/colorOnSurface" />
+
+                    <TextView android:id="@+id/protectionStatusText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/settings_protection_disabled" android:textAppearance="?attr/textAppearanceBodyLarge" android:textColor="?attr/colorError" android:textStyle="bold" />
+
+                    <Button android:id="@+id/protectionToggleButton" style="@style/Widget.Blocker.Button" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="Activate Protection" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Features Card -->
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Features" android:textAppearance="?attr/textAppearanceLabelLarge" android:textColor="?attr/colorPrimary" android:layout_marginBottom="12dp" android:layout_marginStart="8dp" />
+
+            <com.google.android.material.card.MaterialCardView style="?attr/materialCardViewElevatedStyle" android:layout_width="match_parent" android:layout_height="wrap_content" app:cardElevation="2dp" app:cardCornerRadius="24dp" android:layout_marginBottom="24dp">
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+
+                    <Button android:id="@+id/ankiBlockerButton" style="@style/Widget.Blocker.Button.Tonal" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Anki Blocker Settings" app:icon="@android:drawable/ic_menu_preferences" app:iconGravity="textStart" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Permissions Card -->
+            <TextView android:id="@+id/permissionsLabel" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Required Permissions" android:textAppearance="?attr/textAppearanceLabelLarge" android:textColor="?attr/colorPrimary" android:layout_marginBottom="12dp" android:layout_marginStart="8dp" />
+
+            <com.google.android.material.card.MaterialCardView style="?attr/materialCardViewOutlinedStyle" android:layout_width="match_parent" android:layout_height="wrap_content" app:cardCornerRadius="24dp" android:layout_marginBottom="24dp">
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
+
+                    <TextView android:id="@+id/adminStatusText" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/admin_permission_disabled" android:textAppearance="?attr/textAppearanceBodyMedium" android:textColor="?attr/colorOnSurfaceVariant" />
+
+                    <Button android:id="@+id/enableAdminButton" style="@style/Widget.Blocker.Button.Text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="@string/enable_admin_permission" />
+
+                    <com.google.android.material.divider.MaterialDivider android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginVertical="12dp"/>
+
+                    <TextView android:id="@+id/accessibilityStatusText" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/accessibility_permission_disabled" android:textAppearance="?attr/textAppearanceBodyMedium" android:textColor="?attr/colorOnSurfaceVariant" />
+
+                    <Button android:id="@+id/enableAccessibilityButton" style="@style/Widget.Blocker.Button.Text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="@string/enable_accessibility_permission" />
+
+                    <com.google.android.material.divider.MaterialDivider android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginVertical="12dp"/>
+
+                    <TextView android:id="@+id/overlayStatusText" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Display Over Other Apps: Disabled" android:textAppearance="?attr/textAppearanceBodyMedium" android:textColor="?attr/colorOnSurfaceVariant" />
+
+                    <Button android:id="@+id/enableOverlayButton" style="@style/Widget.Blocker.Button.Text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Enable Overlay Permission" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Information Card -->
+            <TextView android:id="@+id/blockedSectionsLabel" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Protected Sections" android:textAppearance="?attr/textAppearanceLabelLarge" android:textColor="?attr/colorPrimary" android:layout_marginBottom="12dp" android:layout_marginStart="8dp" />
+
+            <com.google.android.material.card.MaterialCardView style="?attr/materialCardViewElevatedStyle" app:cardElevation="0dp" app:cardBackgroundColor="?attr/colorSurfaceContainerLow" android:layout_width="match_parent" android:layout_height="wrap_content" app:cardCornerRadius="24dp">
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
+
+                    <TextView android:id="@+id/deviceAdminSection" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/device_admin_section" android:textAppearance="?attr/textAppearanceBodyMedium" android:textColor="?attr/colorOnSurfaceVariant" android:paddingBottom="8dp" />
+
+                    <TextView android:id="@+id/accessibilitySection" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/accessibility_section" android:textAppearance="?attr/textAppearanceBodyMedium" android:textColor="?attr/colorOnSurfaceVariant" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

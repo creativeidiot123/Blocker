@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="match_parent" android:background="?attr/colorSurface" tools:context=".ui.AppSelectionActivity">
+
+    <com.google.android.material.appbar.AppBarLayout android:layout_width="match_parent" android:layout_height="wrap_content" app:elevation="0dp" android:background="?attr/colorSurface">
+
+        <com.google.android.material.appbar.MaterialToolbar android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" app:title="Select Apps to Monitor" app:titleCentered="true" app:titleTextAppearance="?attr/textAppearanceHeadlineSmall">
+        </com.google.android.material.appbar.MaterialToolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:paddingHorizontal="20dp" android:paddingTop="16dp" android:paddingBottom="24dp" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Select which apps should be blocked while Anki cards are due." android:textAppearance="?attr/textAppearanceBodyMedium" android:textColor="?attr/colorOnSurfaceVariant" android:layout_marginBottom="24dp" android:gravity="center" />
+
+        <com.google.android.material.textfield.TextInputLayout style="?attr/textInputOutlinedStyle" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Search apps..." app:startIconDrawable="@android:drawable/ic_menu_search" app:boxCornerRadiusTopStart="20dp" app:boxCornerRadiusTopEnd="20dp" app:boxCornerRadiusBottomStart="20dp" app:boxCornerRadiusBottomEnd="20dp" android:layout_marginBottom="16dp">
+
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/searchEditText" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="text" android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.card.MaterialCardView style="?attr/materialCardViewElevatedStyle" app:cardElevation="2dp" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" app:cardCornerRadius="24dp" android:layout_marginBottom="20dp">
+
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/appRecyclerView" android:layout_width="match_parent" android:layout_height="match_parent" android:clipToPadding="false" android:paddingVertical="8dp" android:scrollbars="vertical" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <Button android:id="@+id/saveButton" style="@style/Widget.Blocker.Button" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Save Selection" android:textSize="18sp" />
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

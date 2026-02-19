@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Material 3 Expressive Base Colors (used if dynamic colors are disabled) -->
+    <color name="md_theme_light_primary">#6750A4</color>
+    <color name="md_theme_light_onPrimary">#FFFFFF</color>
+    <color name="md_theme_light_primaryContainer">#EADDFF</color>
+    <color name="md_theme_light_onPrimaryContainer">#21005D</color>
+
+    <color name="md_theme_dark_primary">#D0BCFF</color>
+    <color name="md_theme_dark_onPrimary">#381E72</color>
+    <color name="md_theme_dark_primaryContainer">#4F378B</color>
+    <color name="md_theme_dark_onPrimaryContainer">#EADDFF</color>
+
+    <!-- Anki Blocker Settings screen colors -->
+    <!-- Preserved for legacy if strictly needed, but M3 attrs are preferred now -->
+    <color name="anki_warning_orange">#FFA726</color>
+    <color name="anki_primary_blue">#42A5F5</color>
+    <color name="anki_hint_grey">#9E9E9E</color>
+</resources>

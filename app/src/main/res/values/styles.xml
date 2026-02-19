@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Custom Button Styles for Expressive UI -->
+    <style name="Widget.Blocker.Button" parent="Widget.Material3.Button.ElevatedButton">
+        <item name="shapeAppearance">@style/ShapeAppearance.Material3.Corner.Full</item>
+        <item name="android:minHeight">64dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.Material3.LabelLarge</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="Widget.Blocker.Button.Tonal" parent="Widget.Material3.Button.TonalButton">
+        <item name="shapeAppearance">@style/ShapeAppearance.Material3.Corner.Full</item>
+        <item name="android:minHeight">64dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.Material3.LabelLarge</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="Widget.Blocker.Button.Text" parent="Widget.Material3.Button.TextButton">
+        <item name="shapeAppearance">@style/ShapeAppearance.Material3.Corner.Full</item>
+        <item name="android:textAppearance">@style/TextAppearance.Material3.LabelLarge</item>
+    </style>
+</resources>

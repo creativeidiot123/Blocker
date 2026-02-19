@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Blocker" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/md_theme_light_primary</item>
+        <item name="colorOnPrimary">@color/md_theme_light_onPrimary</item>
+        <item name="colorPrimaryContainer">@color/md_theme_light_primaryContainer</item>
+        <item name="colorOnPrimaryContainer">@color/md_theme_light_onPrimaryContainer</item>
+
+        <!-- Material 3 Expressive Shapes -->
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.Material3.Corner.Full</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.Material3.Corner.Full</item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.Material3.Corner.ExtraLarge</item>
+    </style>
+
+    <style name="Theme.Blocker" parent="Base.Theme.Blocker" />
+</resources>
