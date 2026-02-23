@@ -29,6 +29,18 @@ Whether you are studying, working, or trying to reduce compulsive screen use, Bl
 
 Built around friction, not inspiration.
 
+### Store your passwords here
+https://github.com/creativeidiot123/Lockey/releases
+Generate a highly complex and random password. It should be impossible to memorize.
+
+Example: b$ca{76r>t<3.w7yrqrt6dab?rtfg3iqrdasa
+
+Secure and "Forget" the Password
+Crucial Step: You must not have easy access to this password.
+
+Entrust it to a reliable person (like a family member or trusted friend). Send it to them and then delete all records of it from your own devices and message history. The goal is that you cannot retrieve it on your own.
+
+Put it in the Lockey app provided above, and put a 350 character protection minimum.
 ---
 
 ## ✨ Key Features
