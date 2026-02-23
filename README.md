@@ -125,21 +125,9 @@ Blocker is designed for:
 - Language learning with Anki
 - Reducing compulsive social media usage
 
-It is intentionally strict.
+It is intentionally strict. If you wanna increase the blocking strength even more and wanna go all out on your phone strictness, read this https://github.com/creativeidiot123/Completely-kill-your-phone-addiction, enable it and boom you're gold.
 
 If you are looking for flexible or gentle blocking, this may not be the right tool.
-
----
-
-## 🧪 Status
-
-Actively maintained and evolving.
-
-Future improvements may include:
-- Custom reward ratios
-- Detailed usage analytics
-- Additional tamper detection strategies
-- Expanded study-app integrations
 
 ---
 
