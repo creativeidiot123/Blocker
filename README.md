@@ -42,6 +42,7 @@ Crucial Step: You must not have easy access to this password.
 Entrust it to a reliable person (like a family member or trusted friend). Send it to them and then delete all records of it from your own devices and message history. The goal is that you cannot retrieve it on your own.
 
 Put it in the Lockey app provided above, and put a 350 character protection minimum.
+
 ---
 
 ## ✨ Key Features
