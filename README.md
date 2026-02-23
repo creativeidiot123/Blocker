@@ -14,6 +14,9 @@
 
 ## 📖 Overview
 
+This project is part of the larger initiative:  
+[Completely Kill Your Phone Addiction](https://github.com/creativeidiot123/Completely-kill-your-phone-addiction/blob/main/README.md)
+
 Blocker is a robust Android application engineered to eliminate distractions at the system level.
 
 It is not a reminder app.  
