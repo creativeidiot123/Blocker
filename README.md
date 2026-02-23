@@ -31,6 +31,7 @@ Built around friction, not inspiration.
 
 ### Store your passwords here
 https://github.com/creativeidiot123/Lockey/releases
+
 Generate a highly complex and random password. It should be impossible to memorize.
 
 Example: b$ca{76r>t<3.w7yrqrt6dab?rtfg3iqrdasa
